@@ -243,7 +243,7 @@ class _HomeScreenClassState extends State<HomeScreenClass> {
                       Variables.name = data.name;
                       Variables.price = data.price;
                       Navigator.of(context).pushNamed(Routes.detailsRoute,
-                          arguments: {'name': data.name, 'price': data.price});
+                          arguments: {'name': data.name, 'price': data.price,'image':data.image});
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

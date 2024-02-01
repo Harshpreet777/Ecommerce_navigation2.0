@@ -14,7 +14,7 @@ class _DetailsScreenClassState extends State<DetailsScreenClass> {
   // final price=routeArgs['price'].toString();
   @override
   Widget build(BuildContext context) {
-  final Map routeArgs=ModalRoute.of(context)?.settings.arguments as Map<String,Object>;
+  final Map routeArgs=ModalRoute.of(context)?.settings.arguments as Map<String,Object?>;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -27,7 +27,7 @@ class _DetailsScreenClassState extends State<DetailsScreenClass> {
               children: [
                 Container(
                   color: ColorConstant.textFormFieldColor,
-                  child: Image.asset('assets/images/firstguy.png'),
+                  child: Image.asset(routeArgs["image"]),
                 ),
                 const Positioned(
                   left: 25,
