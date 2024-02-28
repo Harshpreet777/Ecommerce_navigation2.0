@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_2_demo/constants/color_constant.dart';
-import 'package:navigation_2_demo/constants/image_list.dart';
-import 'package:navigation_2_demo/constants/variables.dart';
+import 'package:navigation_2_demo/utils/color_constant.dart';
+import 'package:navigation_2_demo/utils/image_list.dart';
+import 'package:navigation_2_demo/utils/variables.dart';
 import 'package:navigation_2_demo/models/response_model.dart';
 import 'package:navigation_2_demo/routing/routes.dart';
 // import 'package:navigation_2_demo/models/response_model.dart';
@@ -243,7 +243,11 @@ class _HomeScreenClassState extends State<HomeScreenClass> {
                       Variables.name = data.name;
                       Variables.price = data.price;
                       Navigator.of(context).pushNamed(Routes.detailsRoute,
-                          arguments: {'name': data.name, 'price': data.price,'image':data.image});
+                          arguments: {
+                            'name': data.name,
+                            'price': data.price,
+                            'image': data.image
+                          });
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -311,8 +315,7 @@ class _HomeScreenClassState extends State<HomeScreenClass> {
         items: [
           const BottomNavigationBarItem(
             icon: Icon(
-              Icons.abc,
-              size: 0,
+              Icons.home,
             ),
             label: 'Home',
           ),
@@ -338,9 +341,7 @@ class _HomeScreenClassState extends State<HomeScreenClass> {
         unselectedItemColor: Colors.black,
         selectedLabelStyle: const TextStyle(
             color: Colors.blue, fontSize: 18, fontWeight: FontWeight.w500),
-        unselectedLabelStyle: const TextStyle(
-            color: Colors.blue, fontSize: 18, fontWeight: FontWeight.w400),
-        showUnselectedLabels: true,
+        showUnselectedLabels: false,
         unselectedIconTheme: const IconThemeData(color: Colors.black),
         selectedIconTheme: const IconThemeData(color: Colors.blue),
       ),

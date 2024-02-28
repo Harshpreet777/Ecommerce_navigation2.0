@@ -9,22 +9,18 @@ class PageRouter {
     switch (settings.name) {
       case Routes.searchRoute:
         return pageRoute(
-          const SearchScreenClass(), settings,
-          //  Variables.name,
-          // Variables.price
+          const SearchScreenClass(),
+          settings,
         );
       case Routes.detailsRoute:
         return pageRoute(
-          const DetailsScreenClass(), settings,
-          // Variables.name,
-          // Variables.price
+          const DetailsScreenClass(),
+          settings,
         );
       case Routes.homeRoute:
         return pageRoute(
           const HomeScreenClass(),
           settings,
-          // Variables.name,
-          // Variables.price,
         );
       default:
         return MaterialPageRoute(
@@ -39,9 +35,6 @@ class PageRouter {
       child: child,
       routeName: settings.name,
       arguments: settings.arguments,
-      // name: name,
-      // price: price,
-      // image: image,
     );
   }
 }
@@ -50,14 +43,12 @@ class FadeRoute extends PageRouteBuilder {
   final Widget? child;
   final String? routeName;
   final Object? arguments;
-  
 
-  FadeRoute(
-      {this.child,
-      this.routeName,
-      this.arguments,
-      })
-      : super(
+  FadeRoute({
+    this.child,
+    this.routeName,
+    this.arguments,
+  }) : super(
           settings: RouteSettings(name: routeName, arguments: arguments),
           pageBuilder: (
             BuildContext context,

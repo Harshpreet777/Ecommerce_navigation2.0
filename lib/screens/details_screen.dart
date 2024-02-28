@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_2_demo/constants/color_constant.dart';
-import 'package:navigation_2_demo/constants/image_list.dart';
+import 'package:navigation_2_demo/utils/color_constant.dart';
+import 'package:navigation_2_demo/utils/image_list.dart';
 
 class DetailsScreenClass extends StatefulWidget {
   const DetailsScreenClass({super.key});
@@ -65,7 +65,7 @@ class _DetailsScreenClassState extends State<DetailsScreenClass> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.symmetric(horizontal:20,vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -87,7 +87,7 @@ class _DetailsScreenClassState extends State<DetailsScreenClass> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
